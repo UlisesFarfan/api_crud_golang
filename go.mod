@@ -1,6 +1,6 @@
 module github.com/api-rest-go
 
-go 1.21.0
+go 1.23
 
 require github.com/antonfisher/nested-logrus-formatter v1.3.1
 
