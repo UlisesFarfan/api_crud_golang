@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"os"
 
 	r "github.com/api-rest-go/router"
@@ -10,14 +11,16 @@ import (
 
 func main() {
 	godotenv.Load()
+	port := os.Getenv("PORT")
 	router := gin.Default()
 	router.Use(CORSMiddleware())
 	app := r.Router(router)
-	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
 	}
-	app.Run(port)
+	if err := app.Run(":" + port); err != nil {
+		log.Panicf("error: %s", err)
+	}
 }
 
 func CORSMiddleware() gin.HandlerFunc {
