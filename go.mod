@@ -2,8 +2,6 @@ module github.com/api-rest-go
 
 go 1.21.0
 
-require github.com/antonfisher/nested-logrus-formatter v1.3.1
-
 require (
 	github.com/bytedance/sonic v1.10.0 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20230717121745-296ad89f973d // indirect
