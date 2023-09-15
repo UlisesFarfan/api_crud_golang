@@ -1,6 +1,6 @@
 module github.com/api-rest-go
 
-go 1.21.0
+go 1.20.5
 
 require (
 	github.com/bytedance/sonic v1.10.0 // indirect
