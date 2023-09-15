@@ -18,7 +18,7 @@ func main() {
 	if port == "" {
 		port = "8080"
 	}
-	if err := app.Run(port); err != nil {
+	if err := app.Run(":" + port); err != nil {
 		log.Panicf("error: %s", err)
 	}
 }
